@@ -1,0 +1,22 @@
+<ion-menu side="start" menuId="first" contentId="main" class="my-menu">
+  <ion-header>
+    <ion-toolbar color="light">
+      <ion-title class="ion-text-center">MENU</ion-title>
+      <ion-buttons (click)="closeMenu()" slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-avatar slot="end" (click)="openProfile()">
+        <img src="../../../assets/profile.jpg">
+      </ion-avatar>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-list>
+      <ion-item (click)="openProfile()">Profile</ion-item>
+      <ion-item (click)="openDigimonList()">Digimons</ion-item>
+      <ion-item (click)="salir()">Sign out</ion-item>
+    </ion-list>
+  </ion-content>
+
+</ion-menu>

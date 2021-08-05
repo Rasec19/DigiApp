@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Porfile</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card *ngFor="let user of user">
+    <ion-card-content>
+      <img src="../../assets/profile.jpg" alt="User">
+      <ion-card-title class="ion-text-center">{{user.nombre}} {{user.apellido}}</ion-card-title>
+      <p class="ion-text-justify">
+        {{user.telefono}} <br>
+        {{user.fecha}}
+      </p>
+      <ion-button expand="full" color="secondary" (click)="alertEditar()">Editar datos</ion-button>
+      <ion-button expand="full" color="danger" (click)="alertEliminar()">Eliminar perfil</ion-button>
+    </ion-card-content>
+  </ion-card>  
+
+</ion-content>

@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Información</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="digimonlist"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-card *ngFor="let digimon of digimon">
+      <ion-card-content>
+        <img src="{{digimon.img}}" alt="{{digimon.name}}">
+        <ion-card-title class="ion-text-center">{{digimon.name}}</ion-card-title>
+        <p class="ion-text-justify">Stage: {{digimon.level}}</p>
+      </ion-card-content>
+    </ion-card>  
+
+</ion-content>

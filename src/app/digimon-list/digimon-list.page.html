@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Digimons</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-item *ngFor="let digimon of digimons" [routerLink]="['/digi-info/' + digimon.name]">
+      <ion-avatar slot="start">
+        <img src="{{digimon.img}}" alt="{{digimon.name}}">
+      </ion-avatar>
+      <ion-label>{{digimon.name}} {{digimon.id}}</ion-label>
+    </ion-item>
+</ion-list>
+  
+
+</ion-content>
